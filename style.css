@@ -61,6 +61,10 @@ table {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -81,11 +85,22 @@ section.main {
   height: 80vh;
   background-color: antiquewhite;
   padding: 2rem;
+  display: flex;
 }
 
 
 .main-container {
   background-color: aquamarine;
+  width: min(50%, 30rem);
+  height: 10rem;
+}
+
+.main-container-input {
+
+}
+
+.main-container-output {
+
 }
 
 
