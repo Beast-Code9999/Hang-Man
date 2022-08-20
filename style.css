@@ -95,14 +95,19 @@ section.main {
   background-color: aquamarine;
   width: min(40%, 30rem);
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main-container-input {
-
+  background-color: black;
+  height: 40%;
 }
 
 .main-container-output {
-
+  background-color: white;
+  height: 40%;
 }
 
 .main-image {
