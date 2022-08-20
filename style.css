@@ -84,15 +84,17 @@ section.main {
   width: 100%;
   height: 80vh;
   background-color: antiquewhite;
-  padding: 2rem;
+  padding: 2rem 10%;
   display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
 }
 
 
 .main-container {
   background-color: aquamarine;
-  width: min(50%, 30rem);
-  height: 10rem;
+  width: min(40%, 30rem);
+  height: auto;
 }
 
 .main-container-input {
@@ -101,6 +103,12 @@ section.main {
 
 .main-container-output {
 
+}
+
+.main-image {
+  width: min(40%, 30rem);
+  height: auto;
+  background-color: azure;
 }
 
 
