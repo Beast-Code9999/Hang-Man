@@ -98,16 +98,19 @@ section.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .main-container-input {
   background-color: black;
   height: 40%;
+  width: 95%;
 }
 
 .main-container-output {
   background-color: white;
   height: 40%;
+  width: 95%;
 }
 
 .main-image {
@@ -116,7 +119,7 @@ section.main {
   background-color: rgb(31, 209, 209);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   section.main {
     height: 150vh;
     display: flex;
@@ -126,12 +129,12 @@ section.main {
   }
 
   .main-container {
-    width: 90%;
+    width: 95%;
     height: 50%;
   }
 
   .main-image {
-    width: 90%;
+    width: 95%;
     height: 50%;
   }
 
