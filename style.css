@@ -113,20 +113,26 @@ section.main {
 .main-image {
   width: min(40%, 30rem);
   height: auto;
-  background-color: azure;
+  background-color: rgb(31, 209, 209);
 }
 
 @media screen and (max-width: 700px) {
   section.main {
+    height: 150vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
 
   .main-container {
     width: 90%;
-    height: 90%;
+    height: 50%;
+  }
+
+  .main-image {
+    width: 90%;
+    height: 50%;
   }
 
 }
