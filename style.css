@@ -116,6 +116,21 @@ section.main {
   background-color: azure;
 }
 
+@media screen and (max-width: 700px) {
+  section.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-container {
+    width: 90%;
+    height: 90%;
+  }
+
+}
+
 
 /* precoded footer */
 footer {
