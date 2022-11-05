@@ -112,6 +112,14 @@ section.main {
   background-color: gray;
   height: 40%;
   width: 95%;
+  padding: 2rem;
+}
+.input__table {
+  width: 100%;
+  border: 2px solid black;
+}
+.input__row {
+  
 }
 .main-image {
   width: min(40%, 30rem);
