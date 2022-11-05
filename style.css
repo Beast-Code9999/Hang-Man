@@ -101,18 +101,18 @@ section.main {
   align-items: center;
 }
 
-.main-container-input {
-  background-color: black;
-  height: 40%;
-  width: 95%;
-}
 
-.main-container-output {
+.output {
   background-color: white;
   height: 40%;
   width: 95%;
 }
 
+.input {
+  background-color: gray;
+  height: 40%;
+  width: 95%;
+}
 .main-image {
   width: min(40%, 30rem);
   height: auto;
