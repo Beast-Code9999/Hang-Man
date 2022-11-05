@@ -118,8 +118,9 @@ section.main {
   width: 100%;
   border: 2px solid black;
 }
-.input__row {
-  
+.input__data {
+  padding: 1rem;
+  border: 1px solid black;
 }
 .main-image {
   width: min(40%, 30rem);
