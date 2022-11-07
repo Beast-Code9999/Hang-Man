@@ -128,6 +128,12 @@ section.main {
   padding: 1rem;
   border: 1px solid black;
 }
+.input__data:hover {
+  filter: brightness(2);
+  color: red;
+  cursor: pointer;
+
+}
 .main-image {
   width: min(40%, 30rem);
   height: auto;
