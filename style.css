@@ -112,6 +112,9 @@ section.main {
   background-color: gray;
   height: 40%;
   width: 95%;
+  display: flex;
+  justify-content: center;
+  
 }
 .input__table {
   width: 100%;
