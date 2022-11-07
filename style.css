@@ -106,6 +106,9 @@ section.main {
   background-color: white;
   height: 40%;
   width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input {
