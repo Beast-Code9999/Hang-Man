@@ -99,9 +99,8 @@ section.main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 1rem;
 }
-
-
 .output {
   background-color: white;
   height: 40%;
@@ -148,6 +147,7 @@ section.main {
   width: min(40%, 30rem);
   height: auto;
   background-color: rgb(31, 209, 209);
+  border-radius: 1rem;
 }
 
 @media screen and (max-width: 900px) {
