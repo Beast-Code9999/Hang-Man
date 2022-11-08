@@ -113,12 +113,10 @@ section.main {
 }
 
 .input {
-  background-color: gray;
   height: 40%;
   width: 95%;
   display: flex;
   justify-content: center;
-  
 }
 .input__table {
   width: 100%;
@@ -131,6 +129,7 @@ section.main {
 .input__data {
   width: calc(100% / 9);
   border: 1px solid black;
+  background-color: gray;
 }
 .input__data span {
   width: 100%;
@@ -140,9 +139,9 @@ section.main {
   align-items: center;
 }
 .input__data:hover {
-  filter: brightness(2);
   color: red;
   cursor: pointer;
+  filter: brightness(120%);
 
 }
 .main-image {
