@@ -122,11 +122,22 @@ section.main {
 }
 .input__table {
   width: 100%;
+  height: 100%;
   border: 2px solid black;
 }
+.input__row {
+  height: 33%;
+}
 .input__data {
-  padding: 1rem;
+  width: calc(100% / 9);
   border: 1px solid black;
+}
+.input__data span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input__data:hover {
   filter: brightness(2);
