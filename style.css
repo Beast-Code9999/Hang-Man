@@ -128,7 +128,7 @@ section.main {
 .input__data {
   width: calc(100% / 9);
   border: 1px solid black;
-  background-color: gray;
+  background-color: #c6bd98;
   transition: all .1s;
 }
 .input__data span {
@@ -141,7 +141,7 @@ section.main {
 .input__data:hover {
   color: red;
   cursor: pointer;
-  filter: brightness(110%);
+  filter: brightness(105%);
   transform: translate(.15rem, -.2rem);
 
 }
