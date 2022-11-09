@@ -159,6 +159,15 @@ section.main {
   height: auto;
   background-color: var(--color-secondary);
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container {
+  width: 95%;
+  height: 95%;
+  background-color: white;
+  border-radius: 1rem;
 }
 
 @media screen and (max-width: 900px) {
