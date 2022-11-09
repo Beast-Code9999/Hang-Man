@@ -1,3 +1,9 @@
+:root {
+  --color-primary: #c6bd98;
+  --color-secondary: #77725e;
+  --color-tertiary: #aea273;
+}
+
 /* CSS reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -78,6 +84,7 @@ header {
   justify-content: center;
   align-items: center;
   font-size: 3rem;
+  background-color: var(--color-tertiary);
 }
 
 section.main {
@@ -92,7 +99,7 @@ section.main {
 
 
 .main-container {
-  background-color: aquamarine;
+  background-color: var(--color-secondary);
   width: min(40%, 30rem);
   height: auto;
   display: flex;
@@ -128,7 +135,7 @@ section.main {
 .input__data {
   width: calc(100% / 9);
   border: 1px solid black;
-  background-color: #c6bd98;
+  background-color: var(--color-primary);
   transition: all .1s;
 }
 .input__data span {
@@ -139,7 +146,7 @@ section.main {
   align-items: center;
 }
 .input__data:hover {
-  color: red;
+  color: white;
   cursor: pointer;
   filter: brightness(105%);
   transform: translate(.15rem, -.2rem);
@@ -148,7 +155,7 @@ section.main {
 .main-image {
   width: min(40%, 30rem);
   height: auto;
-  background-color: rgb(31, 209, 209);
+  background-color: var(--color-secondary);
   border-radius: 1rem;
 }
 
@@ -180,7 +187,7 @@ footer {
     text-align: center;
     font-size: 25px;
     box-sizing: border-box;
-    background-color: aquamarine;
+    background-color: var(--color-tertiary);
     width: 100%;
     height: 10vh;
     display: flex;
