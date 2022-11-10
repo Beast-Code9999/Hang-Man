@@ -160,7 +160,11 @@ section.main {
   cursor: pointer;
   filter: brightness(105%);
   transform: translate(.15rem, -.2rem);
-
+}
+.active {
+  cursor: pointer;
+  filter: brightness(105%);
+  transform: translate(.075rem, -.1rem);
 }
 .main-image {
   width: min(40%, 30rem);
