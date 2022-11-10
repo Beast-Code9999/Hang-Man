@@ -12,4 +12,16 @@ description = ['Black and thin, grows from folicles that are found on the dermis
     'the branch of knowledge concerned with the production, consumption, and transfer of wealth.',
     'a statement or account that makes something clear.',
     'a business or organization providing a particular service on behalf of another business, person, or group.',
-    ]
+    'the action or process of preparing or being prepared for use or consideration.',
+    'the anniversary of the day on which a person was born, typically treated as an occasion for celebration and the giving of gifts.',
+    'a solid form of the element carbon',
+    'the hard fibrous material that forms the main substance of the trunk or branches of a tree or shrub, used for fuel or timber.',
+    'items worn to cover the body.',
+    'a person who is studying at a university or other place of higher education.',
+    'the group of people with the authority to govern a country or state; a particular ministry in office.',
+    'the standard of something as measured against other things of a similar kind; the degree of excellence of something.',
+    ' car that moves in a vertical shaft to carry passengers or freight between the levels of a multistory building',
+    'the expression of or the ability to express thoughts and feelings by articulate sounds.',
+    'a written or spoken agreement, especially one concerning employment, sales, or tenancy, that is intended to be enforceable by law.',
+    'a sudden accident or a natural catastrophe that causes great damage or loss of life.',
+    'chance or luck as an arbitrary force affecting human affairs.']
