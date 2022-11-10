@@ -1,0 +1,2 @@
+words = ['hair', 'passenger', 'library','poetry','category','revenue','analysis','magazine','height','economics','explanation','agency','preparation','birthday','diamond','wood','clothes','student','government','quality','elevator','speech','contract','disaster','fortune','classroom','leader','addition','supermarket','consequence','insect','outcome','leadership','dinner','chest','wedding','republic','mixture','interaction','advice']
+
