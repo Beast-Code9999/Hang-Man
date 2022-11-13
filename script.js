@@ -56,7 +56,7 @@ function randomChoice() {
     let word = '';
     for( let i = 0; i < wordsArray[randomIndex].length; i++ ) {
         word += " _ "
-    }
+    } 
     output.textContent = word
     chosenWord = wordsArray[randomIndex];
 }
@@ -69,20 +69,29 @@ function checkLetter() {
         letter.addEventListener('click', verifyLetter)
 
         function verifyLetter() {
-            addCssOnLetter()
+            if( letter.childNodes[0] !== undefined ) {
+                addCssOnLetter()
+                displayWord()
+            }
         }
 
         function addCssOnLetter() {
-            if( letter.childNodes[0] !== undefined ) {
-                console.log(letter.childNodes[0].textContent)
-                for( let i = 0; i < chosenWord.length; i++ ) {
-                    console.log(chosenWord[i])
-                    if( letter.childNodes[0].textContent.toLowerCase() === chosenWord[i].toLowerCase() ) {
-                        letter.classList.add('active', 'correct-input');
-                    }
-                    else {
-                        letter.classList.add('active', 'wrong-input');
-                    }
+            for( let i = 0; i < chosenWord.length; i++ ) {
+                if( letter.childNodes[0].textContent.toLowerCase() === chosenWord[i].toLowerCase() ) {
+                    letter.classList.add('active', 'correct-input');
+                }
+                else {
+                    letter.classList.add('active', 'wrong-input');
+                }
+            }
+        }
+
+        function displayWord() {
+            let spreadedArray = output.textContent.split('');
+            for( let i = 0; i < chosenWord.length; i++ ) {
+                if( letter.childNodes[0].textContent.toLowerCase() === chosenWord[i].toLowerCase() ) {
+                    spreadedArray[(i * 2 + 1) + i] = chosenWord[i] // (i * 2 + 1) + i is the formula to convert the index number of chosenWord[i] to output.textContent specific underscore spacing
+                    output.textContent = spreadedArray.join('')
                 }
             }
         }
