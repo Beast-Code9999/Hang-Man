@@ -65,11 +65,27 @@ checkLetter()
 
 function checkLetter() {
     inputData.forEach( function( letter ) {
-        console.log(letter.childNodes[0])
+        // console.log(letter.childNodes[0])
+        letter.addEventListener('click', verifyLetter)
 
-        letter.addEventListener('click', function() {
-            console.log('it works')
-        })
+        function verifyLetter() {
+            addCssOnLetter()
+        }
+
+        function addCssOnLetter() {
+            if( letter.childNodes[0] !== undefined ) {
+                console.log(letter.childNodes[0].textContent)
+                for( let i = 0; i < chosenWord.length; i++ ) {
+                    console.log(chosenWord[i])
+                    if( letter.childNodes[0].textContent.toLowerCase() === chosenWord[i].toLowerCase() ) {
+                        letter.classList.add('active', 'correct-input');
+                    }
+                    else {
+                        letter.classList.add('active', 'wrong-input');
+                    }
+                }
+            }
+        }
     })
 }
 
