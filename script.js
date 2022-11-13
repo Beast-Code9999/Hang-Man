@@ -90,7 +90,7 @@ function checkLetter() {
             let spreadedArray = output.textContent.split('');
             for( let i = 0; i < chosenWord.length; i++ ) {
                 if( letter.childNodes[0].textContent.toLowerCase() === chosenWord[i].toLowerCase() ) {
-                    spreadedArray[(i * 2 + 1) + i] = chosenWord[i] // (i * 2 + 1) + i is the formula to convert the index number of chosenWord[i] to output.textContent specific underscore spacing
+                    spreadedArray[(i * 2 + 1) + i] = chosenWord[i] // (i * 2 + 1) + i is the formula to convert the index number of chosenWord[i] to output.textContent specific underscore spacing 
                     output.textContent = spreadedArray.join('')
                 }
             }
