@@ -161,6 +161,10 @@ section.main {
   filter: brightness(105%);
   transform: translate(.15rem, -.2rem);
 }
+.input__data:active {
+  transform: translate(.075rem, -.1rem);
+
+}
 .active {
   cursor: pointer;
   filter: brightness(105%);
@@ -182,6 +186,8 @@ section.main {
   border-radius: 1rem;
 }
 
+
+/* media start */
 @media screen and (max-width: 900px) {
   section.main {
     height: 150vh;
@@ -202,7 +208,7 @@ section.main {
   }
 
 }
-
+/* media end */
 
 /* precoded footer */
 footer {

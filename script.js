@@ -40,3 +40,6 @@ description = ['Black and thin, grows from folicles that are found on the dermis
     'a substance made by mixing other substances together.',
     'communication or direct involvement with someone or something.',
     'guidance or recommendations offered with regard to prudent future action.']
+
+    const inputData = document.querySelectorAll('.input__data');
+    console.log(inputData)
