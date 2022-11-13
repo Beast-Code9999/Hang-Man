@@ -193,6 +193,9 @@ section.main {
   height: 95%;
   background-color: white;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

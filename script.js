@@ -46,6 +46,7 @@ const output = document.querySelector('.output');
 const inputData = document.querySelectorAll('.input__data');
 
 let chosenWord;
+let counter = 0;
 
 window.addEventListener('load', randomChoice);
 
@@ -98,5 +99,18 @@ function checkLetter() {
     })
 }
 
+draw()
 
+function draw() {
+    const container = document.querySelector('.image-container');
+    // const containerWidth = container.clientWidth;
+    // const containerHeight = container.clientHeight;
+
+    const canvas = document.getElementById('canvas');
+
+    canvas.style.width = '95%';
+    canvas.style.height = '95%';
+    canvas.style.borderRadius = '1rem'
+    canvas.style.background = '#c6bd98';
+}
 
