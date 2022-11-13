@@ -45,18 +45,26 @@ const description = document.querySelector('.description');
 const output = document.querySelector('.output');
 const inputData = document.querySelectorAll('.input__data');
 
-console.log(description, output)
+console.log(description, output);
 
 let chosenWord;
 
 window.addEventListener('load', randomChoice);
 
 function randomChoice() {
-    const randomIndex = Math.floor(Math.random() * 41)
-    description.textContent = descriptionArray[randomIndex]
-    let word = ''
+    const randomIndex = Math.floor(Math.random() * 40);
+    console.log(randomIndex)
+    description.textContent = descriptionArray[randomIndex];
+    let word = '';
     for( let i = 0; i < wordsArray[randomIndex].length; i++ ) {
         word += " _ "
     }
     output.textContent = word
+    chosenWord = wordsArray[randomIndex];
 }
+
+inputData.forEach( function( letter ) {
+
+})
+
+
