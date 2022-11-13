@@ -168,9 +168,16 @@ section.main {
   transform: translate(.075rem, -.1rem);
 }
 .active {
-  cursor: pointer;
-  filter: brightness(105%);
-  transform: translate(.075rem, -.1rem);
+  filter: opacity(.7);
+  pointer-events: none;
+}
+.wrong-input {
+  background-color: red;
+  color: whitesmoke;
+}
+.correct-input {
+  background-color: greenyellow;
+  color: whitesmoke;
 }
 .main-image {
   width: min(40%, 30rem);
