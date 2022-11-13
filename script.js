@@ -45,8 +45,6 @@ const description = document.querySelector('.description');
 const output = document.querySelector('.output');
 const inputData = document.querySelectorAll('.input__data');
 
-console.log(description, output);
-
 let chosenWord;
 
 window.addEventListener('load', randomChoice);
@@ -63,8 +61,17 @@ function randomChoice() {
     chosenWord = wordsArray[randomIndex];
 }
 
-inputData.forEach( function( letter ) {
+checkLetter()
 
-})
+function checkLetter() {
+    inputData.forEach( function( letter ) {
+        console.log(letter.childNodes[0])
+
+        letter.addEventListener('click', function() {
+            console.log('it works')
+        })
+    })
+}
+
 
 
