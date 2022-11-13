@@ -41,5 +41,14 @@ description = ['Black and thin, grows from folicles that are found on the dermis
     'communication or direct involvement with someone or something.',
     'guidance or recommendations offered with regard to prudent future action.']
 
-    const inputData = document.querySelectorAll('.input__data');
-    console.log(inputData)
+const inputData = document.querySelectorAll('.input__data');
+
+let chosenWord;
+
+window.addEventListener('load', randomChoice);
+
+function randomChoice() {
+    const randoMIndex = Math.floor(Math.random() * 41)
+    console.log(randoMIndex)
+    
+}
