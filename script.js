@@ -1,6 +1,6 @@
-words = ['hair', 'passenger', 'library','poetry','category','revenue','analysis','magazine','height','economics','explanation','agency','preparation','birthday','diamond','wood','clothes','student','government','quality','elevator','speech','contract','disaster','fortune','classroom','leader','addition','supermarket','consequence','insect','outcome','leadership','dinner','chest','wedding','republic','mixture','interaction','advice']
+const wordsArray = ['hair', 'passenger', 'library','poetry','category','revenue','analysis','magazine','height','economics','explanation','agency','preparation','birthday','diamond','wood','clothes','student','government','quality','elevator','speech','contract','disaster','fortune','classroom','leader','addition','supermarket','consequence','insect','outcome','leadership','dinner','chest','wedding','republic','mixture','interaction','advice']
 
-description = ['Black and thin, grows from folicles that are found on the dermis',
+const descriptionArray = ['Black and thin, grows from folicles that are found on the dermis',
     'a traveller on a public or private conveyance other than the driver, pilot, or crew.',
     'a building or room containing collections of books',
     'literary work in which the expression of feelings and ideas is given intensity by the use of distinctive style and rhythm',
@@ -41,14 +41,22 @@ description = ['Black and thin, grows from folicles that are found on the dermis
     'communication or direct involvement with someone or something.',
     'guidance or recommendations offered with regard to prudent future action.']
 
+const description = document.querySelector('.description');
+const output = document.querySelector('.output');
 const inputData = document.querySelectorAll('.input__data');
+
+console.log(description, output)
 
 let chosenWord;
 
 window.addEventListener('load', randomChoice);
 
 function randomChoice() {
-    const randoMIndex = Math.floor(Math.random() * 41)
-    console.log(randoMIndex)
-    
+    const randomIndex = Math.floor(Math.random() * 41)
+    description.textContent = descriptionArray[randomIndex]
+    let word = ''
+    for( let i = 0; i < wordsArray[randomIndex].length; i++ ) {
+        word += " _ "
+    }
+    output.textContent = word
 }
