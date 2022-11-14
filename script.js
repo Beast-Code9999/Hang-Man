@@ -107,10 +107,17 @@ function draw() {
     // const containerHeight = container.clientHeight;
 
     const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
 
     canvas.style.width = '95%';
     canvas.style.height = '95%';
     canvas.style.borderRadius = '1rem'
     canvas.style.background = '#c6bd98';
+
+    // context.fillRect( x, y, width, height)
+    context.fillRect(50, 130, 200, 1) // bottom horizontal pole
+    context.fillRect(70, 10, 2, 120) // vertical pole
+    context.fillRect(70, 10, 100, 1) // top 
+
 }
 
