@@ -111,14 +111,19 @@ function draw() {
 
     canvas.style.width = '95%';
     canvas.style.height = '95%';
-    canvas.style.borderRadius = '1rem'
+    canvas.style.borderRadius = '1rem';
     canvas.style.background = '#c6bd98';
 
     // context.fillRect( x, y, width, height)
-    context.fillRect(50, 130, 200, 1) // bottom horizontal pole
-    context.fillRect(70, 10, 2, 120) // vertical pole
-    context.fillRect(70, 10, 100, 1) // top horizontal pole
-    context.fillRect(170, 10, 2, 20) // top vertical pole
+    context.fillRect(50, 130, 200, 1); // bottom horizontal pole
+    context.fillRect(70, 10, 2, 120); // vertical pole
+    context.fillRect(70, 10, 100, 1); // top horizontal pole
+    context.fillRect(170, 10, 2, 20); // top vertical pole
+
+    context.beginPath(); // create a circle
+    context.arc(170, 40, 10, 0, Math.PI * 2, false); // use comman + shift + space to show hint
+    context.stroke()
+
 
 }
 
