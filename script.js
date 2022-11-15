@@ -124,6 +124,7 @@ function draw() {
     context.arc(170, 40, 10, 0, Math.PI * 2, false); // use comman + shift + space to show hint
     context.stroke()
 
+    context.fillRect(170, 50, 2, 30); // body
 
 }
 
