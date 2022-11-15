@@ -141,5 +141,19 @@ function draw() {
     context.lineWidth = 2;
     context.stroke()
     context.closePath()
+
+    context.beginPath() // right arm
+    context.moveTo(170, 55);
+    context.lineTo(140, 70)
+    context.lineWidth = 2;
+    context.stroke()
+    context.closePath()
+
+    context.beginPath() // right leg
+    context.moveTo(172, 55);
+    context.lineTo(200, 70)
+    context.lineWidth = 2;
+    context.stroke()
+    context.closePath()
 }
 
