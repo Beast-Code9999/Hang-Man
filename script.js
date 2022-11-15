@@ -117,7 +117,8 @@ function draw() {
     // context.fillRect( x, y, width, height)
     context.fillRect(50, 130, 200, 1) // bottom horizontal pole
     context.fillRect(70, 10, 2, 120) // vertical pole
-    context.fillRect(70, 10, 100, 1) // top 
+    context.fillRect(70, 10, 100, 1) // top horizontal pole
+    context.fillRect(170, 10, 2, 20) // top vertical pole
 
 }
 
