@@ -123,8 +123,23 @@ function draw() {
     context.beginPath(); // create a circle
     context.arc(170, 40, 10, 0, Math.PI * 2, false); // use comman + shift + space to show hint
     context.stroke()
+    context.closePath()
+
 
     context.fillRect(170, 50, 2, 30); // body
 
+    context.beginPath() // left leg
+    context.moveTo(170, 80);
+    context.lineTo(140, 110)
+    context.lineWidth = 2;
+    context.stroke()
+    context.closePath()
+
+    context.beginPath() // right leg
+    context.moveTo(172, 80);
+    context.lineTo(200, 110)
+    context.lineWidth = 2;
+    context.stroke()
+    context.closePath()
 }
 
