@@ -106,6 +106,15 @@ function draw() {
     // const containerWidth = container.clientWidth;
     // const containerHeight = container.clientHeight;
 
+    const drawLine = (fromX, fromY, toX, toY) => {
+        context.beginPath();
+        context.moveTo( fromX, fromY );
+        context.lineTo( toX, toY );
+        context.lineWidth = 2;
+        context.stroke();
+        context.closePath()
+    }
+
 
     const canvas = document.getElementById('canvas');
     const context = canvas.getContext('2d');
