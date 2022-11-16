@@ -140,6 +140,25 @@ const draw = () => {
     context.fill()
     context.closePath()
 
+    const body = () => {
+        drawLine()
+    }
+
+    const leftLeg = () => {
+
+    }
+
+    const rightLeg = () => {
+        
+    }
+
+    const leftArm = () => {
+        
+    }
+
+    const rightArm = () => {
+        
+    }
 
     context.fillRect(170, 50, 2, 30); // body
 
