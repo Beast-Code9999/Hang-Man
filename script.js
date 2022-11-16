@@ -46,7 +46,7 @@ const output = document.querySelector('.output');
 const inputData = document.querySelectorAll('.input__data');
 
 let chosenWord;
-let LossCounter = 0;
+let lossCounter = 0;
 
 window.addEventListener('load', randomChoice);
 
@@ -106,6 +106,7 @@ function draw() {
     // const containerWidth = container.clientWidth;
     // const containerHeight = container.clientHeight;
 
+
     const canvas = document.getElementById('canvas');
     const context = canvas.getContext('2d');
 
@@ -120,12 +121,14 @@ function draw() {
     context.fillRect(70, 10, 2, 120); // vertical pole
 
     context.fillRect(70, 10, 100, 1); // top horizontal pole
-    
+
     context.fillRect(170, 10, 2, 20); // top vertical pole
 
     context.beginPath(); // create a circle
     context.arc(170, 40, 10, 0, Math.PI * 2, false); // use comman + shift + space to show hint
     context.stroke()
+    context.fillStyle = "black";
+    context.fill()
     context.closePath()
 
 
