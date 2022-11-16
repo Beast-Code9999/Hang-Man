@@ -101,7 +101,7 @@ function checkLetter() {
 
 draw()
 
-function draw() {
+const draw = () => {
     const container = document.querySelector('.image-container');
     // const containerWidth = container.clientWidth;
     // const containerHeight = container.clientHeight;
