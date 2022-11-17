@@ -1,5 +1,6 @@
+// words within an array that will be randomly chosen on window load
 const wordsArray = ['hair', 'passenger', 'library','poetry','category','revenue','analysis','magazine','height','economics','explanation','agency','preparation','birthday','diamond','wood','clothes','student','government','quality','elevator','speech','contract','disaster','fortune','classroom','leader','addition','supermarket','consequence','insect','outcome','leadership','dinner','chest','wedding','republic','mixture','interaction','advice']
-
+// description of wordsArray with matching index number 
 const descriptionArray = ['Black and thin, grows from folicles that are found on the dermis',
     'a traveller on a public or private conveyance other than the driver, pilot, or crew.',
     'a building or room containing collections of books',
@@ -120,12 +121,16 @@ function drawPoles() {
     context.fillRect(170, 10, 2, 20); // top vertical pole
 }
 
-const draw = () => {
+const drawHangMan = () => {
     // const container = document.querySelector('.image-container');
     // const containerWidth = container.clientWidth;
     // const containerHeight = container.clientHeight;
     const canvas = document.getElementById('canvas');
     const context = canvas.getContext('2d');
+    canvas.style.width = '95%';
+    canvas.style.height = '95%';
+    canvas.style.borderRadius = '1rem';
+    canvas.style.background = '#c6bd98';
 
     const drawLine = (fromX, fromY, toX, toY) => {
         context.beginPath();
@@ -136,66 +141,63 @@ const draw = () => {
         context.closePath()
     }
 
-    canvas.style.width = '95%';
-    canvas.style.height = '95%';
-    canvas.style.borderRadius = '1rem';
-    canvas.style.background = '#c6bd98';
-
-    context.beginPath(); // create a circle
-    context.arc(170, 40, 10, 0, Math.PI * 2, false); // use comman + shift + space to show hint
-    context.stroke()
-    context.fillStyle = "black";
-    context.fill()
-    context.closePath()
+    const head = () => {
+        context.beginPath(); // create a circle
+        context.arc(170, 40, 10, 0, Math.PI * 2, false); // use comman + shift + space to show hint
+        context.stroke()
+        context.fillStyle = "black";
+        context.fill()
+        context.closePath()
+    }
 
     const body = () => {
-        drawLine()
+        drawLine(170, 50, 200, 50);
     }
 
     const leftLeg = () => {
-
+        drawLine(170, 80, 140, 110);
     }
 
     const rightLeg = () => {
-        
+        drawLine(172, 80, 200, 110);
     }
 
     const leftArm = () => {
-        
+        drawLine(170, 55, 200, 70);
     }
 
     const rightArm = () => {
-        
+        drawLine(172, 55, 200, 70);
     }
 
-    context.fillRect(170, 50, 2, 30); // body
+    // context.fillRect(170, 50, 2, 30); // body
 
-    context.beginPath() // left leg
-    context.moveTo(170, 80);
-    context.lineTo(140, 110)
-    context.lineWidth = 2;
-    context.stroke()
-    context.closePath()
+    // context.beginPath() // left leg
+    // context.moveTo(170, 80);
+    // context.lineTo(140, 110)
+    // context.lineWidth = 2;
+    // context.stroke()
+    // context.closePath()
 
-    context.beginPath() // right leg
-    context.moveTo(172, 80);
-    context.lineTo(200, 110)
-    context.lineWidth = 2;
-    context.stroke()
-    context.closePath()
+    // context.beginPath() // right leg
+    // context.moveTo(172, 80);
+    // context.lineTo(200, 110)
+    // context.lineWidth = 2;
+    // context.stroke()
+    // context.closePath()
 
-    context.beginPath() // right arm
-    context.moveTo(170, 55);
-    context.lineTo(140, 70)
-    context.lineWidth = 2;
-    context.stroke()
-    context.closePath()
+    // context.beginPath() // left arm
+    // context.moveTo(170, 55);
+    // context.lineTo(140, 70)
+    // context.lineWidth = 2;
+    // context.stroke()
+    // context.closePath()
 
-    context.beginPath() // right leg
-    context.moveTo(172, 55);
-    context.lineTo(200, 70)
-    context.lineWidth = 2;
-    context.stroke()
-    context.closePath()
+    // context.beginPath() // right arm
+    // context.moveTo(172, 55);
+    // context.lineTo(200, 70)
+    // context.lineWidth = 2;
+    // context.stroke()
+    // context.closePath()
 }
 
