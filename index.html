@@ -10,67 +10,79 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <header>HANG MAN</header>
-    <section class="main">
-        <div class="main-container">
-            <div class="description">
-                a state in which supreme power is held by the people and their elected representatives, and which has an elected or nominated president rather than a monarch.
+    <main class="main">
+        <header>HANG MAN</header>
+        <section class="main">
+            <div class="main-container">
+                <div class="description">
+                    a state in which supreme power is held by the people and their elected representatives, and which has an elected or nominated president rather than a monarch.
+                </div>
+                <div class="output">
+                    _ _ _ _ _ _ _ _
+                </div>
+                <div class="input">
+                    <table class="input__table">
+                        <tr class="input__row">
+                            <td class="input__data"><span>A</span></td>
+                            <td class="input__data"><span>B</span></td>
+                            <td class="input__data"><span>C</span></td>
+                            <td class="input__data"><span>D</span></td>
+                            <td class="input__data"><span>E</span></td>
+                            <td class="input__data"><span>F</span></td>
+                            <td class="input__data"><span>G</span></td>
+                            <td class="input__data"><span>H</span></td>
+                            <td class="input__data"><span>I</span></td>
+                        </tr>
+                        <tr class="input__row">
+                            <td class="input__data"><span>J</span></td>
+                            <td class="input__data"><span>K</span></td>
+                            <td class="input__data"><span>L</span></td>
+                            <td class="input__data"><span>M</span></td>
+                            <td class="input__data"><span>N</span></td>
+                            <td class="input__data"><span>O</span></td>
+                            <td class="input__data"><span>P</span></td>
+                            <td class="input__data"><span>Q</span></td>
+                            <td class="input__data"><span>R</span></td>
+                        </tr>
+                        <tr class="input__row">
+                            <td class="input__data"><span>S</span></td>
+                            <td class="input__data"><span>T</span></td>
+                            <td class="input__data"><span>U</span></td>
+                            <td class="input__data"><span>V</span></td>
+                            <td class="input__data"><span>W</span></td>
+                            <td class="input__data"><span>X</span></td>
+                            <td class="input__data"><span>Y</span></td>
+                            <td class="input__data"><span>Z</span></td>
+                            <td class="input__data"></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div class="output">
-                _ _ _ _ _ _ _ _
+            <div class="main-image">
+              <div class="image-container">
+                <canvas id="canvas">
+                </canvas>
+              </div>
             </div>
-            <div class="input">
-                <table class="input__table">
-                    <tr class="input__row">
-                        <td class="input__data"><span>A</span></td>
-                        <td class="input__data"><span>B</span></td>
-                        <td class="input__data"><span>C</span></td>
-                        <td class="input__data"><span>D</span></td>
-                        <td class="input__data"><span>E</span></td>
-                        <td class="input__data"><span>F</span></td>
-                        <td class="input__data"><span>G</span></td>
-                        <td class="input__data"><span>H</span></td>
-                        <td class="input__data"><span>I</span></td>
-                    </tr>
-                    <tr class="input__row">
-                        <td class="input__data"><span>J</span></td>
-                        <td class="input__data"><span>K</span></td>
-                        <td class="input__data"><span>L</span></td>
-                        <td class="input__data"><span>M</span></td>
-                        <td class="input__data"><span>N</span></td>
-                        <td class="input__data"><span>O</span></td>
-                        <td class="input__data"><span>P</span></td>
-                        <td class="input__data"><span>Q</span></td>
-                        <td class="input__data"><span>R</span></td>
-                    </tr>
-                    <tr class="input__row">
-                        <td class="input__data"><span>S</span></td>
-                        <td class="input__data"><span>T</span></td>
-                        <td class="input__data"><span>U</span></td>
-                        <td class="input__data"><span>V</span></td>
-                        <td class="input__data"><span>W</span></td>
-                        <td class="input__data"><span>X</span></td>
-                        <td class="input__data"><span>Y</span></td>
-                        <td class="input__data"><span>Z</span></td>
-                        <td class="input__data"></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="main-image">
-          <div class="image-container">
-            <canvas id="canvas">
+        </section>
+        <footer class="footer" id="footer">
+            Copyright © <span class="footer__year"></span>
+            <a href="https://github.com/Beast-Code9999" id="beastcode" target="_blank"><span class="footer__name">&nbsp;Jason Lay</span> </a>
+            <a href="https://github.com/Beast-Code9999" target="_blank">
+                <img src="./img/github_logo.png" alt="github">
+            </a>
+        </footer>
+    </main>
 
-            </canvas>
-          </div>  
+    <div class="ending" id="ending">
+        <div class="ending__text">
+            You Won!, Congratulation wonderful person
         </div>
-    </section>
-    <footer class="footer" id="footer">
-        Copyright © <span class="footer__year"></span>
-        <a href="https://github.com/Beast-Code9999" id="beastcode" target="_blank"><span class="footer__name">&nbsp;Jason Lay</span> </a>  
-        <a href="https://github.com/Beast-Code9999" target="_blank">
-            <img src="./img/github_logo.png" alt="github">
-        </a>
-    </footer>
+        <div class="ending__button-container">
+            <button class="ending__button">
+                Play again?
+            </button>
+        </div>
+    </div>
 </body>
 </html>

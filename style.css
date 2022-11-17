@@ -198,6 +198,31 @@ section.main {
   align-items: center;
 }
 
+/* ending pop up */
+.ending {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+.ending__text {
+
+}
+.ending__button-container {
+
+}
+.ending__button {
+  
+}
+
+/* hide content */
+.hide-ending {
+  display: none;
+}
+
 
 /* media start */
 @media screen and (max-width: 900px) {
