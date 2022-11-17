@@ -149,9 +149,17 @@ const drawHangMan = () => {
         context.fill()
         context.closePath()
     }
-
+    
     const body = () => {
-        drawLine(170, 50, 200, 50);
+        drawLine(170, 50, 170, 80);
+    } 
+
+    const leftArm = () => {
+        drawLine(170, 55, 200, 70);
+    }
+    
+    const rightArm = () => {
+        drawLine(170, 55, 140, 70);
     }
 
     const leftLeg = () => {
@@ -159,45 +167,17 @@ const drawHangMan = () => {
     }
 
     const rightLeg = () => {
-        drawLine(172, 80, 200, 110);
+        drawLine(170, 80, 200, 110);
     }
 
-    const leftArm = () => {
-        drawLine(170, 55, 200, 70);
-    }
-
-    const rightArm = () => {
-        drawLine(172, 55, 200, 70);
-    }
-
-    // context.fillRect(170, 50, 2, 30); // body
-
-    // context.beginPath() // left leg
-    // context.moveTo(170, 80);
-    // context.lineTo(140, 110)
-    // context.lineWidth = 2;
-    // context.stroke()
-    // context.closePath()
-
-    // context.beginPath() // right leg
-    // context.moveTo(172, 80);
-    // context.lineTo(200, 110)
-    // context.lineWidth = 2;
-    // context.stroke()
-    // context.closePath()
-
-    // context.beginPath() // left arm
-    // context.moveTo(170, 55);
-    // context.lineTo(140, 70)
-    // context.lineWidth = 2;
-    // context.stroke()
-    // context.closePath()
-
-    // context.beginPath() // right arm
-    // context.moveTo(172, 55);
-    // context.lineTo(200, 70)
-    // context.lineWidth = 2;
-    // context.stroke()
-    // context.closePath()
+    return {head, body, leftLeg, rightLeg, leftArm, rightArm}
 }
 
+const hangman = drawHangMan()
+
+// hangman.head()
+// hangman.body()
+// hangman.leftArm()
+// hangman.rightArm()
+// hangman.leftLeg()
+// hangman.rightLeg()
