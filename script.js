@@ -184,12 +184,18 @@ const drawHangMan = () => {
 
 window.addEventListener('click', () => {
     console.log(lossCounter)
+    console.log(output.textContent.split(' ').join(''))
 })
 
+function winCheck() {
+    if( output.textContent.includes('_') === false ) {
+        console.log('we won')
+    }
+}
 
 function playGame() {
+    winCheck()
     const hangman = drawHangMan();
-    
     switch( lossCounter ) {
         case 1:
             hangman.head();
@@ -211,11 +217,3 @@ function playGame() {
             break;
     }
 }
-
-
-// hangman.head()
-// hangman.body()
-// hangman.leftArm()
-// hangman.rightArm()
-// hangman.leftLeg()
-// hangman.rightLeg()
