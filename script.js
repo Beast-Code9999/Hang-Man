@@ -49,9 +49,6 @@ const inputData = document.querySelectorAll('.input__data');
 let chosenWord;
 let lossCounter = 0;
 
-function addLoss() {
-    
-}
 
 window.addEventListener('load', randomChoice);
 
@@ -69,6 +66,12 @@ function randomChoice() {
 
 checkLetter();
 
+function addLoss( letter ) {
+    if( chosenWord.includes(letter.childNodes[0].textContent.toLowerCase()) === false ) {
+        lossCounter++
+    }
+}
+
 function checkLetter() {
     inputData.forEach( function( letter ) {
         // console.log(letter.childNodes[0])
@@ -78,6 +81,7 @@ function checkLetter() {
             if( letter.childNodes[0] !== undefined ) {
                 addCssOnLetter();
                 displayWord();
+                addLoss( letter )
             }
         }
 
@@ -177,9 +181,11 @@ const drawHangMan = () => {
     return {head, body, leftLeg, rightLeg, leftArm, rightArm}
 }
 
-window.addEventListener('click', () => {
-    console.log(lossCounter)
-})
+// window.addEventListener('click', () => {
+//     console.log(lossCounter)
+// })
+
+playGame()
 
 function playGame() {
     const hangman = drawHangMan();
@@ -188,10 +194,10 @@ function playGame() {
         case 1:
             hangman.head();
             break;
+            console.log("this works!")
     }
 }
 
-playGame()
 
 // hangman.head()
 // hangman.body()
