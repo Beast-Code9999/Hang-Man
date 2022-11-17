@@ -206,16 +206,25 @@ section.main {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: white);
 }
 .ending__text {
-
+  font-size: 2.5rem;
+  color: green;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 .ending__button-container {
-
+  
 }
-.ending__button {}
-
+.ending__button {
+  background-color: var(--color-primary);
+  font-size: 2rem;
+  padding: 1rem 3rem;
+}
+.ending__button:hover {
+  cursor: pointer;
+}
 /* hide content */
 .hide-ending {
   display: none;
