@@ -82,6 +82,7 @@ function checkLetter() {
                 addCssOnLetter();
                 displayWord();
                 addLoss( letter )
+                playGame()
             }
         }
 
@@ -181,11 +182,10 @@ const drawHangMan = () => {
     return {head, body, leftLeg, rightLeg, leftArm, rightArm}
 }
 
-// window.addEventListener('click', () => {
-//     console.log(lossCounter)
-// })
+window.addEventListener('click', () => {
+    console.log(lossCounter)
+})
 
-playGame()
 
 function playGame() {
     const hangman = drawHangMan();
@@ -194,7 +194,21 @@ function playGame() {
         case 1:
             hangman.head();
             break;
-            console.log("this works!")
+        case 2:
+            hangman.body();
+            break;
+        case 3: 
+            hangman.leftArm();
+            break;
+        case 4: 
+            hangman.rightArm();
+            break;
+        case 5: 
+            hangman.leftLeg();
+            break;
+        case 6: 
+            hangman.rightLeg();
+            break;
     }
 }
 
