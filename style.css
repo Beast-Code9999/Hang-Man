@@ -102,7 +102,7 @@ section.main {
 
 .main-container {
   background-color: var(--color-secondary);
-  width: min(40%, 30rem);
+  width: min(45%, 45rem);
   height: auto;
   display: flex;
   flex-direction: column;
@@ -180,7 +180,7 @@ section.main {
   color: whitesmoke;
 }
 .main-image {
-  width: min(40%, 30rem);
+  width: min(45%, 45rem);
   height: auto;
   background-color: var(--color-secondary);
   border-radius: 1rem;
@@ -206,13 +206,14 @@ section.main {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: white);
+  background-color: white;
 }
 .ending__text {
   font-size: 2.5rem;
   color: green;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  text-align: center;
 }
 .ending__button-container {
   
@@ -224,6 +225,7 @@ section.main {
 }
 .ending__button:hover {
   cursor: pointer;
+  filter: brightness(115%);
 }
 /* hide content */
 .hide-ending {
