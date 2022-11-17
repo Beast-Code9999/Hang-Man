@@ -49,6 +49,10 @@ const inputData = document.querySelectorAll('.input__data');
 let chosenWord;
 let lossCounter = 0;
 
+function addLoss() {
+    
+}
+
 window.addEventListener('load', randomChoice);
 
 function randomChoice() {
@@ -63,7 +67,7 @@ function randomChoice() {
     chosenWord = wordsArray[randomIndex];
 }
 
-checkLetter()
+checkLetter();
 
 function checkLetter() {
     inputData.forEach( function( letter ) {
@@ -72,8 +76,8 @@ function checkLetter() {
 
         function verifyLetter() {
             if( letter.childNodes[0] !== undefined ) {
-                addCssOnLetter()
-                displayWord()
+                addCssOnLetter();
+                displayWord();
             }
         }
 
@@ -92,15 +96,15 @@ function checkLetter() {
             let spreadedArray = output.textContent.split('');
             for( let i = 0; i < chosenWord.length; i++ ) {
                 if( letter.childNodes[0].textContent.toLowerCase() === chosenWord[i].toLowerCase() ) {
-                    spreadedArray[(i * 2 + 1) + i] = chosenWord[i] // (i * 2 + 1) + i is the formula to convert the index number of chosenWord[i] to output.textContent specific underscore spacing 
-                    output.textContent = spreadedArray.join('')
+                    spreadedArray[(i * 2 + 1) + i] = chosenWord[i]; // (i * 2 + 1) + i is the formula to convert the index number of chosenWord[i] to output.textContent specific underscore spacing 
+                    output.textContent = spreadedArray.join('');
                 }
             }
         }
     })
 }
 
-drawPoles()
+drawPoles();
 
 function drawPoles() {
     const canvas = document.getElementById('canvas');
@@ -138,18 +142,18 @@ const drawHangMan = () => {
         context.lineTo( toX, toY );
         context.lineWidth = 2;
         context.stroke();
-        context.closePath()
+        context.closePath();
     }
 
     const head = () => {
         context.beginPath(); // create a circle
         context.arc(170, 40, 10, 0, Math.PI * 2, false); // use comman + shift + space to show hint
-        context.stroke()
+        context.stroke();
         context.fillStyle = "black";
-        context.fill()
-        context.closePath()
+        context.fill();
+        context.closePath();
     }
-    
+
     const body = () => {
         drawLine(170, 50, 170, 80);
     } 
@@ -173,7 +177,21 @@ const drawHangMan = () => {
     return {head, body, leftLeg, rightLeg, leftArm, rightArm}
 }
 
-const hangman = drawHangMan()
+window.addEventListener('click', () => {
+    console.log(lossCounter)
+})
+
+function playGame() {
+    const hangman = drawHangMan();
+    
+    switch( lossCounter ) {
+        case 1:
+            hangman.head();
+            break;
+    }
+}
+
+playGame()
 
 // hangman.head()
 // hangman.body()
