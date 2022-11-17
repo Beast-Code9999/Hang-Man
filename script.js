@@ -72,6 +72,11 @@ function addLoss( letter ) {
     }
 }
 
+function playSound() {
+    const clickSound = document.getElementById('click-sound');
+    clickSound.play()
+}
+
 function checkLetter() {
     inputData.forEach( function( letter ) {
         // console.log(letter.childNodes[0])
@@ -83,6 +88,7 @@ function checkLetter() {
                 displayWord();
                 addLoss( letter )
                 playGame()
+                playSound()
             }
         }
 
@@ -217,6 +223,9 @@ function playGame() {
             break;
     }
 }
+
+
+
 
 function footerDate() {
     const footer = document.querySelector('.footer__year');
