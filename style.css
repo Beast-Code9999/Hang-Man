@@ -224,7 +224,10 @@ section.main {
 }
 .ending__button {
   background-color: var(--color-primary);
-  font-size: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 1rem;
   padding: 1rem 3rem;
 }
 .ending__button:hover {
