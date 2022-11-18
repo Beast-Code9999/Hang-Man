@@ -87,6 +87,7 @@ header {
   align-items: center;
   font-size: 3rem;
   background-color: var(--color-tertiary);
+  font-family: 'Press Start 2P', cursive;
 }
 
 section.main {
