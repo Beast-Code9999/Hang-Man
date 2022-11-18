@@ -215,8 +215,9 @@ section.main {
   font-size: 2.5rem;
   color: green;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: center;
+  font-family: 'Press Start 2P', cursive;
 }
 .ending__button-container {
   
