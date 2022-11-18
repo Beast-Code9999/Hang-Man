@@ -74,6 +74,7 @@ function addLoss( letter ) {
 
 function playSound() {
     const clickSound = document.getElementById('click-sound');
+    clickSound.currentTime = 0;
     clickSound.play()
 }
 
