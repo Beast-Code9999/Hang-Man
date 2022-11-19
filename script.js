@@ -198,15 +198,21 @@ const displayEnding = () => {
         mainWrapper.classList.add('hide-content');
     }
 
-    const addEnding = () => {
+    const addEndingDiv = () => {
         ending.classList.remove('hide-content');
     }
 
-    const showEndingText = text => { 
+    const showEndingText = (text, win) => { 
         endingText.textContent = text;
+        if( win === true ) {
+            endingText.style.color = "green"
+        }
+        else {
+            endingText.style.color = "red"
+        }
     }
 
-    return {removeMainWrapper, addEnding, showEndingText}
+    return {removeMainWrapper, addEndingDiv, showEndingText}
 
 }
 
@@ -219,8 +225,8 @@ function winCheck() {
     if( output.textContent.includes('_') === false ) {
         console.log('we won')
         ending.removeMainWrapper()
-        ending.addEnding()
-        ending.showEndingText("Congratrulationssss")
+        ending.addEndingDiv()
+        ending.showEndingText("Congratrulation kind person, you won!", true)
     }
 }
 // draw hangman bit by bit as the lossCounter increments
@@ -245,6 +251,9 @@ function playGame() {
             break;
         case 6: 
             hangman.rightLeg();
+            ending.removeMainWrapper()
+            ending.addEndingDiv()
+            ending.showEndingText("Mission Failed, We'll get it next time.", false)
             break;
     }
 }
