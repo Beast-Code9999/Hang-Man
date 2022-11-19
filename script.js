@@ -215,15 +215,16 @@ const displayEnding = () => {
 
     const playEndingAudio = win => {
         if( win === true ) {
+            missionPassed.currentTime = 0;
             missionPassed.play();
         }
         else {
+            missionFailed.currentTime = 0;
             missionFailed.play()
         }
     }
     
     return {removeMainWrapper, addEndingDiv, showEndingText, playEndingAudio}
-
 }
 
 const ending = displayEnding()
@@ -265,6 +266,28 @@ function playGame() {
             ending.showEndingText("Mission failed", false)
             ending.playEndingAudio(false)
             break;
+    }
+}
+
+playAgain()
+
+function playAgain() {
+    const endingButton = document.getElementById('ending-button');
+    endingButton.addEventListener('click', restart);
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+    const mainWrapper = document.querySelector('.main-wrapper');
+    const ending = document.getElementById('ending');
+    function restart() {
+        randomChoice();
+        lossCounter = 0;
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        mainWrapper.classList.remove('hide-content');
+        ending.classList.add('hide-content');
+        drawPoles()
+        inputData.forEach( letter => {
+            letter.classList.remove('active', 'correct-input', 'wrong-input');
+        })
     }
 }
 
