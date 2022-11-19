@@ -189,10 +189,10 @@ const drawHangMan = () => {
     return {head, body, leftLeg, rightLeg, leftArm, rightArm}
 }
 
-window.addEventListener('click', () => {
-    console.log(lossCounter)
-    console.log(output.textContent.split(' ').join(''))
-})
+const displayEnding = () => {
+    
+}
+
 // check if win is true or not
 function winCheck() {
     if( output.textContent.includes('_') === false ) {
@@ -234,6 +234,7 @@ function footerDate() {
 }
 
 footerDate()
+
 
 
 const mainWrapper = document.querySelector('.main-wrapper');
