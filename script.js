@@ -194,18 +194,33 @@ const displayEnding = () => {
     const ending = document.getElementById('ending');
     const endingText = document.getElementById('ending-text');
 
-    console.log(endingButton)
-    
     const removeMainWrapper = () => {
-        mainWrapper.classList.add('')
+        mainWrapper.classList.add('hide-content');
     }
 
+    const addEnding = () => {
+        ending.classList.remove('hide-content');
+    }
+
+    const showEndingText = text => { 
+        endingText.textContent = text;
+    }
+
+    return {removeMainWrapper, addEnding, showEndingText}
+
 }
+
+const ending = displayEnding()
+
+
 
 // check if win is true or not
 function winCheck() {
     if( output.textContent.includes('_') === false ) {
         console.log('we won')
+        ending.removeMainWrapper()
+        ending.addEnding()
+        ending.showEndingText("Congratrulationssss")
     }
 }
 // draw hangman bit by bit as the lossCounter increments
@@ -244,5 +259,5 @@ function footerDate() {
 
 footerDate()
 
-const endingButton = document.getElementById('ending-button');
+// const endingButton = document.getElementById('ending-button');
 
