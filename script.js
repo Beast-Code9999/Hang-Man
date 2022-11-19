@@ -234,3 +234,10 @@ function footerDate() {
 }
 
 footerDate()
+
+
+const mainWrapper = document.querySelector('.main-wrapper');
+const ending = document.getElementById('ending');
+
+
+console.log(mainWrapper)
