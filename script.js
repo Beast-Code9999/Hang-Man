@@ -238,6 +238,8 @@ footerDate()
 
 const mainWrapper = document.querySelector('.main-wrapper');
 const ending = document.getElementById('ending');
+const endingText = document.getElementById('ending-text');
+const endingButton = document.getElementById('ending-button');
 
 
-console.log(mainWrapper)
+console.log(endingButton)
