@@ -190,7 +190,16 @@ const drawHangMan = () => {
 }
 
 const displayEnding = () => {
+    const mainWrapper = document.querySelector('.main-wrapper');
+    const ending = document.getElementById('ending');
+    const endingText = document.getElementById('ending-text');
+
+    console.log(endingButton)
     
+    const removeMainWrapper = () => {
+        mainWrapper.classList.add('')
+    }
+
 }
 
 // check if win is true or not
@@ -235,12 +244,5 @@ function footerDate() {
 
 footerDate()
 
-
-
-const mainWrapper = document.querySelector('.main-wrapper');
-const ending = document.getElementById('ending');
-const endingText = document.getElementById('ending-text');
 const endingButton = document.getElementById('ending-button');
 
-
-console.log(endingButton)

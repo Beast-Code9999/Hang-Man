@@ -235,7 +235,7 @@ section.main {
   filter: brightness(115%);
 }
 /* hide content */
-.hide-ending {
+.hide-content {
   display: none;
 }
 
