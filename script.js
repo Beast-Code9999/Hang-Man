@@ -73,7 +73,7 @@ function addLoss( letter ) {
 }
 // play sound when input letter is clicked
 function playSound() {
-    const clickSound = document.getElementById('click-sound');
+    const clickSound = document.getElementById('audio__click');
     clickSound.currentTime = 0;
     clickSound.play()
 }
@@ -185,14 +185,15 @@ const drawHangMan = () => {
     const rightLeg = () => {
         drawLine(170, 80, 200, 110);
     }
-
     return {head, body, leftLeg, rightLeg, leftArm, rightArm}
 }
-
+// show ending div and sound after either winning or losing 
 const displayEnding = () => {
     const mainWrapper = document.querySelector('.main-wrapper');
     const ending = document.getElementById('ending');
     const endingText = document.getElementById('ending-text');
+    const missionFailed = document.getElementById('audio__mission-failed');
+    const missionPassed = document.getElementById('audio__mission-passed');
 
     const removeMainWrapper = () => {
         mainWrapper.classList.add('hide-content');
@@ -212,13 +213,20 @@ const displayEnding = () => {
         }
     }
 
-    return {removeMainWrapper, addEndingDiv, showEndingText}
+    const playEndingAudio = win => {
+        if( win === true ) {
+            missionPassed.play();
+        }
+        else {
+            missionFailed.play()
+        }
+    }
+    
+    return {removeMainWrapper, addEndingDiv, showEndingText, playEndingAudio}
 
 }
 
 const ending = displayEnding()
-
-
 
 // check if win is true or not
 function winCheck() {
@@ -227,6 +235,7 @@ function winCheck() {
         ending.removeMainWrapper()
         ending.addEndingDiv()
         ending.showEndingText("Mission passed: respect++", true)
+        ending.playEndingAudio(true)
     }
 }
 // draw hangman bit by bit as the lossCounter increments
@@ -254,6 +263,7 @@ function playGame() {
             ending.removeMainWrapper()
             ending.addEndingDiv()
             ending.showEndingText("Mission failed", false)
+            ending.playEndingAudio(false)
             break;
     }
 }
@@ -267,6 +277,3 @@ function footerDate() {
 }
 
 footerDate()
-
-// const endingButton = document.getElementById('ending-button');
-
