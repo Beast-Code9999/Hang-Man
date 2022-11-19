@@ -51,7 +51,7 @@ let lossCounter = 0;
 
 
 window.addEventListener('load', randomChoice);
-
+// randomly chooses which index number item to go for (note: both wordsArray && descriptionArray shares the same index)
 function randomChoice() {
     const randomIndex = Math.floor(Math.random() * 40);
     console.log(randomIndex)
@@ -65,19 +65,19 @@ function randomChoice() {
 }
 
 checkLetter();
-
+// increment loss count
 function addLoss( letter ) {
     if( chosenWord.includes(letter.childNodes[0].textContent.toLowerCase()) === false ) {
         lossCounter++
     }
 }
-
+// play sound when input letter is clicked
 function playSound() {
     const clickSound = document.getElementById('click-sound');
     clickSound.currentTime = 0;
     clickSound.play()
 }
-
+// checks if letter is correct, add css accordingly, display result accordingly, and add loss accordingly
 function checkLetter() {
     inputData.forEach( function( letter ) {
         // console.log(letter.childNodes[0])
@@ -117,7 +117,7 @@ function checkLetter() {
 }
 
 drawPoles();
-
+// drawp the poles on canvas on window load
 function drawPoles() {
     const canvas = document.getElementById('canvas');
     const context = canvas.getContext('2d');
@@ -136,7 +136,7 @@ function drawPoles() {
 
     context.fillRect(170, 10, 2, 20); // top vertical pole
 }
-
+// factory function of how hangman model should be drawn
 const drawHangMan = () => {
     // const container = document.querySelector('.image-container');
     // const containerWidth = container.clientWidth;
@@ -193,13 +193,13 @@ window.addEventListener('click', () => {
     console.log(lossCounter)
     console.log(output.textContent.split(' ').join(''))
 })
-
+// check if win is true or not
 function winCheck() {
     if( output.textContent.includes('_') === false ) {
         console.log('we won')
     }
 }
-
+// draw hangman bit by bit as the lossCounter increments
 function playGame() {
     winCheck()
     const hangman = drawHangMan();
@@ -225,9 +225,7 @@ function playGame() {
     }
 }
 
-
-
-
+// allows dynamic date within footer
 function footerDate() {
     const footer = document.querySelector('.footer__year');
     console.log(footer)
