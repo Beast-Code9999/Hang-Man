@@ -226,7 +226,7 @@ function winCheck() {
         console.log('we won')
         ending.removeMainWrapper()
         ending.addEndingDiv()
-        ending.showEndingText("Congratrulation kind person, you won!", true)
+        ending.showEndingText("Mission passed: respect++", true)
     }
 }
 // draw hangman bit by bit as the lossCounter increments
@@ -253,7 +253,7 @@ function playGame() {
             hangman.rightLeg();
             ending.removeMainWrapper()
             ending.addEndingDiv()
-            ending.showEndingText("Mission Failed, We'll get it next time.", false)
+            ending.showEndingText("Mission failed", false)
             break;
     }
 }
